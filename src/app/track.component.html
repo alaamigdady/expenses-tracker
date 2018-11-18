@@ -1,0 +1,34 @@
+<div class="track">
+    <header class="track-header">
+        <br>
+        <br>
+        <br>
+        <button>{{category}}</button>
+        <br>
+        <br>
+        <br>
+		<button (click) = "getMonth('JAN')">JAN</button>
+        <button (click) = "getMonth('FEB')">FEB</button>
+        <button (click) = "getMonth('MAR')">MAR</button>
+        <button (click) = "getMonth('APR')">APR</button>
+        <button (click) = "getMonth('MAY')">MAY</button>
+        <button (click) = "getMonth('JUN')">JUN</button>
+        <button (click) = "getMonth('JUL')">JUL</button>
+       <button (click) = "getMonth('AUG')">AUG</button>
+
+        <button (click) = "getMonth('SEP')">SEP</button>
+        <button (click) = "getMonth('OCT')">OCT</button>
+        <button (click) = "getMonth('NOV')">NOV</button>
+        <button (click) = "getMonth('DEC')">DEC</button>
+
+        <br>
+        <br>
+        <br>
+         <input value={{subtotal}}  placeholder="subtotal" />
+        <br>
+        <br>
+        <br>
+        <a [routerLink] = "['/category']"><button>back</button></a>
+
+    </header>
+</div>

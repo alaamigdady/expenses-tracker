@@ -1,0 +1,32 @@
+
+
+<div class="app">
+    <header class="app-header">
+
+<div class="add">
+    <div class='category'>
+        <p> category </p>
+        <select [(ngModel)]="type">
+            <option value="housing">HOUSING</option>
+            <option value="transportation">TRANSPORTATION</option>
+            <option value="bills">BILLS</option>
+            <option value="other">OTHER</option>
+        </select>
+    </div>
+    <div class='amount'>
+        <p> amount </p>
+        <input [(ngModel)] ="amount" />    </div>
+    <div class="date">
+        <p> date </p>
+        <input [(ngModel)] ="date" type="date" />
+    </div>
+    <button (click) = "add()" class="button">add</button>
+</div>    <div class="input">
+        <input value={{total}}  placeholder="total" />
+        <br>
+        <br>
+            </div>
+            <a [routerLink] = "['category']"><button>GET TRACK</button></a>
+    </header>
+</div>
+

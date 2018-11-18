@@ -1,6 +1,6 @@
-CREATE DATABASE expensesTracker;
+CREATE DATABASE expenses_Tracker;
 
-USE expensesTracker;
+USE expenses_Tracker;
 
 CREATE TABLE logs  (
   	type varchar(20) NOT NULL,
