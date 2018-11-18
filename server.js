@@ -35,6 +35,18 @@ app.post('/saveLog',function(req,res){
 
 })
 
+app.get('/getAll',function(req,res){
+	let queryStr2= 'SELECT SUM(amount) FROM logs';
+	db.query(queryStr2,function(err,results){
+		if (err) throw err
+	    let x = (JSON.stringify(results)).split(':')[1];
+		console.log(results)
+		x=x.slice(0,-2)
+		res.send(x)
+	})
+
+})
+
 app.get('/getLog/:type/:month', function(req,res){
 	let months={JAN:'01',FEB:'02',MAR:'03',APR:'04',MAY:'05',JUN:'06',JUL:'07',AUG:'08',SEP:'09',OCT:'10',NOV:'11',DEC:'12'}
 	console.log(req.params.type,req.params.month)

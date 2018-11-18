@@ -78,6 +78,10 @@ var AddComponent = /** @class */ (function () {
         var _this = this;
         this.app.addLog({ "type": this.type, "amount": this.amount, "date": this.date }).subscribe(function (data) { _this.total = data; }, function (err) { console.log('error'); });
     };
+    AddComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.app.getAll().subscribe(function (data) { _this.total = data; }, function (err) { console.log('error'); });
+    };
     AddComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'add-root',
@@ -246,6 +250,9 @@ var appService = /** @class */ (function () {
     };
     appService.prototype.getMonth = function (val, cal) {
         return this.http.get('/getLog/' + cal + '/' + val);
+    };
+    appService.prototype.getAll = function () {
+        return this.http.get('/getAll');
     };
     appService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])(),

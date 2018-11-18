@@ -30,5 +30,9 @@ export class appService {
    return this.http.get('/getLog/'+cal+'/'+val)
    }
 
+   getAll(){
+   return this.http.get('/getAll')
+   }
+
    
 }

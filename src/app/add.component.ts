@@ -23,6 +23,9 @@ constructor(private app: appService) {
  		{this.total=data},(err)=>{console.log('error')})
  }
 
- 
+ ngOnInit(){
+ this.app.getAll().subscribe(data => 
+ 		{this.total=data},(err)=>{console.log('error')})
+ }
  											 
 }
